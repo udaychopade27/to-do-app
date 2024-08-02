@@ -10,14 +10,14 @@ pipeline {
          stage ("build docker image"){
               steps { 
                     echo "building docker container"
-                    sh "docker build -t to-do-app ."
+                    sh "docker build -t to-do ."
      
                    }
 }
          stage ("run container"){
               steps {
                     echo "run container"
-                    sh "docker run -d -p 3000:3000 to-do-app"
+                    sh "docker run -d -p 3000:3000 to-do"
                    }
 }
 }
