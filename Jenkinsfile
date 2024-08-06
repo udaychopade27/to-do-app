@@ -10,7 +10,7 @@ pipeline {
          stage ("build"){
               steps { 
                     echo "building docker container"
-                    sh "docker build -t to-do-app to-do-app/"
+                    sh "docker build -t to-do-app /to-do-app"
      
                    }
 }
