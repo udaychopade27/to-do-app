@@ -8,6 +8,12 @@ pipeline {
                      sh "docker --version"
                   }                     
             }
+         stage("stop existing container"){
+              steps{
+                echo "stop running container"
+                sh "docker-compose down"
+              }
+         }   
          stage ("build"){
               steps { 
                     echo "building docker container"
