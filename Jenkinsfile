@@ -5,6 +5,7 @@ pipeline {
               steps {
                     echo "cloning code from github repo"
                      sh "git -v"
+                     sh "docker --version"
                   }                     
             }
          stage ("build"){
