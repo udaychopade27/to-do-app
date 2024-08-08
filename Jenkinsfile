@@ -11,15 +11,15 @@ pipeline {
          stage ("build"){
               steps { 
                     echo "building docker container"
-                    sh "docker build -t to-do-app ."
+                    sh "docker-compose up -d"
      
                    }
             }
-         stage ("deploy"){
-              steps {
-                    echo "run container"
-                    sh "docker run -d -p 3000:3000 to-do-app"
-                   }
-            }
+        // stage ("deploy"){
+          //    steps {
+            //        echo "run container"
+              //      sh "docker run -d -p 3000:3000 to-do-app"
+                //   }
+           // }
       }
 }
