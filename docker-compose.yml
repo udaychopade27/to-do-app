@@ -1,8 +1,8 @@
 version: '1'
 services:
-    web:
+    app:
      build: .
      container_name: to-do-app
      image: to-do-app
      ports:
-         - "3000:3000"    
+         - "3000:3000"
