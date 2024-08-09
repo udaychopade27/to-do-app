@@ -3,6 +3,8 @@ services:
     app:
      build: .
      container_name: to-do-app
-     image: to-do-app
+     image: to-do-multistage
      ports:
-         - "3000:3000"      
+         - "4000:3000"      
+    
+    

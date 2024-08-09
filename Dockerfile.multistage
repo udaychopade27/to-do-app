@@ -1,0 +1,14 @@
+FROM node:20 AS build
+
+WORKDIR /app
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+FROM node:slim
+
+COPY --from=build /app /app
+
+CMD ["node","/src/index.js"]
