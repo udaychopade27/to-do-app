@@ -5,6 +5,6 @@ services:
      container_name: to-do-app
      image: to-do-multistage
      ports:
-         - "4000:3000"      
+         - "3000:3000"      
     
     
